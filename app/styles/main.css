@@ -1,0 +1,48 @@
+.image-container {
+    position: relative;
+}
+
+.image-container > img {
+    max-width: 100%;
+}
+
+.image-container > .marker {
+    position: absolute; 
+}
+
+.marker-icon {
+    color: yellow;
+    cursor: pointer;
+}
+
+.marker-comment-dialog {
+    background-color:white;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    min-width: 300px;
+    z-index: 999;
+}
+
+.author {
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    background-color: rgb(255,87,34);
+    color: white;
+    border: solid 1px rgb(255,87,34);
+    border-radius: 3px;
+}
+
+md-list-item.with-controls {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: inherit;
+    align-items: inherit;
+    padding: 0 16px 6px 16px;
+}
+
+.md-list-item_controls {
+    text-align: right;
+}

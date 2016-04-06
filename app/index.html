@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="redpenApp" layout="column">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Site header begin -->
+    <md-toolbar>
+        <h1>Redpen</h1>
+    </md-toolbar>
+    <!-- Site header end -->
+
+    <!-- Site content begin -->
+    <div class="container" layout="row" layout-align="center center" flex>
+        <div data-red-pen-layout image-src="/content/img/design-image.jpg" class="image-container md-whiteframe-4dp">
+            <div class="marker" data-ng-show="showMarkers" data-ng-repeat="marker in ctrl.markers track by $index" data-red-pen-marker>
+                <md-icon class="marker-icon" md-svg-icon='marker'></md-icon>
+                <data-red-pen-comments marker="marker" data-ng-show="ctrl.showComments"></data-red-pen-coments>
+            </div>
+        </div>
+    </div>
+    <!-- Site content end -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/directives/redpenlayuot.js"></script>
+    <script src="scripts/directives/redpenmarker.js"></script>
+    <script src="scripts/services/redpenmarkers.js"></script>
+    <script src="scripts/services/redpenmarker.js"></script>
+    <script src="scripts/directives/redpencomments.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

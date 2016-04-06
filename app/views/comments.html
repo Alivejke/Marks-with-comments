@@ -1,0 +1,23 @@
+<div class="marker-comment-dialog md-whiteframe-4dp">
+    <md-content layout="column">
+        <md-list>
+            <md-list-item ng-repeat="comment in ctrl.comments" class="with-controls">
+                <div class="md-list-item_controls">
+                    <md-button data-ng-click="ctrl.removeComment(comment)" class="md-raised md-button md-ink-ripple">
+                        <span>Delete</span>
+                    </md-button>
+                </div>
+                <div class="md-list-item-text">
+                    <p>{{comment.text}}</p>
+                    <p class="author">{{comment.author}}</p>
+                </div>
+                <md-divider ng-if="!$last"></md-divider>
+            </md-list-item>
+        </md-list>
+        <md-input-container>
+            <label>Write your comment or @mention...</label>
+            <input data-ng-model="ctrl.comment" type="text">
+        </md-input-container>
+        <md-button ng-show="ctrl.comment" data-ng-click="ctrl.postComment()" class="post md-raised md-primary">Post this comment</md-button>
+    </md-content>
+</div>
